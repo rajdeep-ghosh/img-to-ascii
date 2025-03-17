@@ -6,6 +6,7 @@ def ascii_converter(image, type, saveas, scale):
   img = Image.open(image)
   w, h = img.size
 
+  # downscale image
   img.resize((w//scale, h//scale)).save("resized.%s" % type)
 
   img = Image.open("resized.%s" % type)
